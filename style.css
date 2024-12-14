@@ -1,0 +1,131 @@
+ .heading {
+    animation: none;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 4rem;
+    white-space: nowrap;
+}
+
+.heading.one {
+    width: 5ch;
+}
+
+.heading.two {
+    width: 15ch;
+}
+
+.heading.three {
+    width: 7ch;
+}
+
+.heading.one.show {
+    color: white;
+    animation: typing 0.7s steps(5), blink .5s step-end infinite alternate;
+}
+
+.heading.two.show {
+    color: black;
+    animation: typing 1.5s steps(15), blink .5s step-end infinite alternate;
+}
+
+.heading.three.show {
+    color: black;
+    animation: typing 0.7s steps(7), blink .5s step-end infinite alternate;
+}
+
+.paragraph {
+    font-family: monospace;
+    font-size: 1.4rem;
+}
+
+.paragraph.one {
+    color: white;
+}
+
+.container {
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.container.one {
+    background-color: black;
+}
+
+.container.two {
+    background-color: yellow;
+}
+
+.container-body {
+    flex-grow: 1;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    max-width: 1300px!important;
+}
+
+.container-body.one {
+    background-color: black;
+}
+
+.scroll-progress {
+    width: 0;
+    background-color: #000000;
+    height: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+html, body {
+    scroll-snap-type: y mandatory;
+    margin: 0;
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+header {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    margin: 0 auto;
+    color: white;
+    font-size: 2.8rem;
+    font-weight: bold;
+    font-family: "GeneralSans";
+    z-index: 1000; /* A high value to ensure it is on top */
+}
+
+@keyframes typing {
+    from {
+      width: 0
+    }
+}
+      
+@keyframes blink {
+    50% {
+      border-color: transparent
+    }
+}
+
+@font-face {
+    font-family: "GeneralSans";
+    src: url(fonts/GeneralSans-Light.woff2);
+}

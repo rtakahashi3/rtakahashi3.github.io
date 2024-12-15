@@ -26,6 +26,10 @@
     width: 21ch;
     font-family: "andalemono";
 }
+.heading.six {
+    width: 12ch;
+    font-family: "andalemono";
+}
 
 .heading.one.show {
     color: white;
@@ -46,6 +50,10 @@
 .heading.five.show {
     color: black;
     animation: typing 1s steps(21), blink .5s step-end infinite alternate;
+}
+.heading.six.show {
+    color: black;
+    animation: typing 1s steps(12), blink .5s step-end infinite alternate;
 }
 
 .paragraph.one {
@@ -69,6 +77,11 @@
     font-size: 1.6rem;
 }
 .paragraph.five {
+    color: black;
+    font-family: "GeneralSans";
+    font-size: 1.6rem;
+}
+.paragraph.six {
     color: black;
     font-family: "GeneralSans";
     font-size: 1.6rem;

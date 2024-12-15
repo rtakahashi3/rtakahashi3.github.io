@@ -3,45 +3,84 @@
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
-    font-family: monospace;
     font-size: 4rem;
     white-space: nowrap;
 }
-
 .heading.one {
     width: 5ch;
+    font-family: monospace;
 }
-
 .heading.two {
-    width: 15ch;
+    width: 5ch;
+    font-family: "microstyle";
 }
-
 .heading.three {
-    width: 7ch;
+    width: 3ch;
+    font-family: "sfpro";
+}
+.heading.four {
+    width: 3ch;
+    font-family: "TwitterChirp";
+}
+.heading.five {
+    width: 21ch;
+    font-family: "andalemono";
 }
 
 .heading.one.show {
     color: white;
     animation: typing 0.7s steps(5), blink .5s step-end infinite alternate;
 }
-
 .heading.two.show {
     color: black;
-    animation: typing 1.5s steps(15), blink .5s step-end infinite alternate;
+    animation: typing 0.7s steps(5), blink .5s step-end infinite alternate;
 }
-
 .heading.three.show {
-    color: black;
-    animation: typing 0.7s steps(7), blink .5s step-end infinite alternate;
+    color: white;
+    animation: typing 0.5s steps(4), blink .5s step-end infinite alternate;
 }
-
-.paragraph {
-    font-family: monospace;
-    font-size: 1.4rem;
+.heading.four.show {
+    color: black;
+    animation: typing 0.3s steps(3), blink .5s step-end infinite alternate;
+}
+.heading.five.show {
+    color: black;
+    animation: typing 1s steps(21), blink .5s step-end infinite alternate;
 }
 
 .paragraph.one {
     color: white;
+    font-family: monospace;
+    font-size: 1.5rem;
+}
+.paragraph.two {
+    color: black;
+    font-family: "GeneralSans";
+    font-size: 1.3rem;
+}
+.paragraph.three {
+    color: white;
+    font-family: "sfpro";
+    font-size: 1.6rem;
+}
+.paragraph.four {
+    color: black;
+    font-family: "TwitterChirp";
+    font-size: 1.6rem;
+}
+.paragraph.five {
+    color: black;
+    font-family: "GeneralSans";
+    font-size: 1.6rem;
+}
+
+/* additional paragraph */
+.ad-paragraph {
+    display: flex;
+    gap: 50px;
+    max-height: 30%!important;
+    max-width: 1200px!important;
+    align-items: center;
 }
 
 .container {
@@ -52,14 +91,6 @@
     height: 100vh;
 }
 
-.container.one {
-    background-color: black;
-}
-
-.container.two {
-    background-color: yellow;
-}
-
 .container-body {
     flex-grow: 1;
     margin: 0 auto;
@@ -68,17 +99,19 @@
     max-width: 1300px!important;
 }
 
-.container-body.one {
-    background-color: black;
-}
-
 .scroll-progress {
     width: 0;
-    background-color: #000000;
+    background-color: #333333;
     height: 10px;
     position: fixed;
     bottom: 0;
     left: 0;
+}
+
+.extraheading {
+    font-family: "GeneralSans";
+    font-weight: bold;
+    font-size: 2rem;
 }
 
 html {
@@ -104,7 +137,7 @@ section {
 header {
     position: fixed;
     bottom: 30px;
-    left: 50%;
+    left: 48%;
     margin: 0 auto;
     color: white;
     font-size: 2.8rem;
@@ -117,8 +150,7 @@ header {
     from {
       width: 0
     }
-}
-      
+}    
 @keyframes blink {
     50% {
       border-color: transparent
@@ -127,5 +159,21 @@ header {
 
 @font-face {
     font-family: "GeneralSans";
-    src: url(fonts/GeneralSans-Light.woff2);
+    src: url("fonts/GeneralSans-Light.woff2");
+}
+@font-face {
+    font-family: "TwitterChirp";
+    src: url("fonts/chirp-regular-web.woff");
+}
+@font-face {
+    font-family: "microstyle";
+    src: url("fonts/microstyle.woff");
+}
+@font-face {
+    font-family: "sfpro";
+    src: url("fonts/sf-pro-text_regular.woff2");
+}
+@font-face {
+    font-family: "andalemono";
+    src: url("fonts/ANDALEMO.woff");
 }

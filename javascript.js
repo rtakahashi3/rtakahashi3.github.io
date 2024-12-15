@@ -39,7 +39,6 @@ sections.forEach((section) => {
         trigger: section,
         start: 'top center',
         end: 'bottom center',
-        markers: true,
         onEnter: () => gsap.to("header span", {text: section.dataset.pname, 
             color: section.dataset.color}),
         onEnterBack: () => gsap.to("header span", {text: section.dataset.pname,
